@@ -4,6 +4,10 @@ class V1::ThingsController < ApplicationController
       {
         :name => 'some-thing',
         :guid => '0415674d-a0e8-4748-af68-a5f53a05c453'
+      },
+      {
+        :name => 'some-thing-else',
+        :guid => '0415674d-a0e8-4748-af68-a5f53a05c4533'
       }
     ]}.to_json
   end

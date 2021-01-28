@@ -5,9 +5,8 @@ import { createStructuredSelector } from 'reselect'
 const GET_THINGS_REQUEST = 'GET_THINGS_REQUEST';
 const GET_THINGS_SUCCESS = 'GET_THINGS_SUCCESS';
 
-
 function getThings() {
-  console.log('getThings Action!')
+  console.log('getThing() Action! called')
   return dispatch => {
     dispatch({ type: GET_THINGS_REQUEST });
     return fetch('v1/things.json')
@@ -18,6 +17,7 @@ function getThings() {
 };
 
 export function getThingsSuccess(json) {
+  console.log('getThingSuccess() Action! called')
   return{
     type: GET_THINGS_SUCCESS,
     json
@@ -26,10 +26,15 @@ export function getThingsSuccess(json) {
 
 class HelloWorld extends React.Component {
   render () {
+    const { things } = this.props;
+    const thingsList = things.map((thing) => {
+      return <li key={thing.guid}>{thing.name} {thing.guid}</li>
+    })
     return (
       <React.Fragment>
         Greeting: {this.props.greeting}
         <button className="getThingsBtn" onClick={() => this.props.getThings()}>getThings</button>
+        <ul>{ thingsList }</ul>
       </React.Fragment>
     );
   }
