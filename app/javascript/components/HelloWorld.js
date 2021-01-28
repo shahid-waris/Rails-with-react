@@ -29,9 +29,7 @@ class HelloWorld extends React.Component {
     return (
       <React.Fragment>
         Greeting: {this.props.greeting}
-
         <button className="getThingsBtn" onClick={() => this.props.getThings()}>getThings</button>
-
       </React.Fragment>
     );
   }
