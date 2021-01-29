@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :models
   resources :users
   namespace :v1, defaults: {formate: 'json'} do
   get 'things' ,to: 'things#index'
