@@ -25,8 +25,6 @@ gem 'jbuilder', '~> 2.7'
 
 # Authentication & Authorization
 gem 'devise' # Flexible authentication solution
-gem 'omniauth-facebook' # Facebook OAuth2 Strategy for OmniAuth
-gem "recaptcha"
 
 
 # Use Active Storage variant
