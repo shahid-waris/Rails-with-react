@@ -26,6 +26,8 @@ gem 'jbuilder', '~> 2.7'
 # Authentication & Authorization
 gem 'devise' # Flexible authentication solution
 
+gem 'awesome_print'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
