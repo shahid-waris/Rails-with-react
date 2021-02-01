@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users
   namespace :v1, defaults: {formate: 'json'} do
   get 'things' ,to: 'things#index'
+  get 'test123' ,to: 'test#new'
  end
 
  get '*page', to: 'static#index', constrainsts: ->(req) do
